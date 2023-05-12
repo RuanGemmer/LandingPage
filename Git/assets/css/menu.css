@@ -64,3 +64,7 @@
 .menuspace {
     min-height: 6.0rem;
 }
+
+.closemenu{
+    display: none;
+}

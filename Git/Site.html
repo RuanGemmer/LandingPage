@@ -21,13 +21,15 @@
 </head>
 
 <body>
+    <input id="closemenu" class="closemenu" type="checkbox" aria-label="close menu" role="button" aria-pressed="true">
+    <label class="closemenulabel" for="closemenu"></label>
     <div class="menu">
         <div class="menucontent">
-            <h1>
+            <h1 onclick="getElementById('closemenu').checked=false;">
                 <a href="#home">LOGO</a>
             </h1>
             <nav>
-                <ul>
+                <ul onclick="getElementById('closemenu').checked=false;">
                     <li><a href="#pilates">pilates</a></li>
                     <li><a href="#gridcontent">benefícios</a></li>
                     <li><a href="#gallery">fotos</a></li>
@@ -41,7 +43,7 @@
 
     <div class="menuspace"></div>
 
-    <section id=home class="section introimg">
+    <section id="home" class="section introimg">
         <div class="focus">
             <div class="introcontent maincontent">
                 <div class="introtext">
@@ -106,7 +108,7 @@
             <h2 class="gridmainhead">fotos</h2>
             <p class="gridmaincontent">Breve descrição</p>
 
-            <div class="grid">
+            <div class="grid galleryresponsive">
                 <div class="galleryimg">
                     <img src="/Git/assets/images/galery1.jpg" alt="foto de estudio de pilates">
                 </div>
@@ -254,6 +256,17 @@
             <div class="contactimg">
                 <img src="/Git/assets/images/contact.svg" alt="foto de fale conosco">
             </div>
+
+            <div class="iconcontact">
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=5554996333758"><img
+                        src="/Git/assets/images/whatsapp.svg" alt="Contato whatsapp"></a>
+                <a target="_blank" href="https://www.instagram.com/fisiolalitramontina/"><img
+                        src="/Git/assets/images/instagram.svg" alt="Contato instagram"></a>
+                <a target="_blank" href="https://www.facebook.com/RuanEzekiel"><img
+                        src="/Git/assets/images/facebook.svg" alt="contato Facebook"></a>
+
+            </div>
+
             <div class="contactform">
                 <fieldset class="formgrid">
                     <legend>Fale Conosco</legend>
@@ -275,7 +288,8 @@
 
                     <div class="formgroup fullwidth">
                         <label for="message">Mensagem</label>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Sua mensagem..."></textarea>
+                        <textarea name="message" id="message" cols="30" rows="10"
+                            placeholder="Sua mensagem..."></textarea>
                     </div>
 
                     <div class="formgroup fullwidth">
@@ -288,8 +302,11 @@
     </section>
 
     <footer id="footer" class="footer mainbg">
-        <p><a rel="nofollow" target="_blank" href="http://linktr.ee/ruangemmer">Feito por Ruan Gemmer <sup>®</sup></a></p>
+        <p><a rel="nofollow" target="_blank" href="http://linktr.ee/ruangemmer">Feito por Ruan Gemmer <sup>®</sup></a>
+        </p>
     </footer>
+
+    <a class="backtohome" href="#home">➜</a>
 
 </body>
 
