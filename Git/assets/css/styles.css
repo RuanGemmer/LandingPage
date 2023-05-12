@@ -264,13 +264,14 @@ body .fullwidth {
     rotate: 270deg;
     font-size: 2rem;
     font-weight: 700;
-    border: 0.1rem solid var(--primary-color)
+    border: 0.1rem solid var(--primary-color);
 }
 
 .backtohome:hover {
     background-color: var(--primary-color);
     color: var(--gray-color);
-    border: 0.1rem solid var(--gray-color)
+    border: 0.1rem solid var(--gray-color);
+    transition: all 300ms ease-in-out;
 }
 
 
@@ -350,20 +351,28 @@ body .fullwidth {
     }
 
     .closemenulabel::after {
-        content: '≡';
+        content: '☰';
         position: fixed;
         z-index: 3;
         top: 2rem;
         right: 2rem;
-        background-color: var(--primary-color);
-        color: var(--gray-color);
+        background-color: var(--gray-color);
+        color: var(--primary-color);
+        border: 0.1rem solid var(--primary-color);
         font-size: 3rem;
         line-height: 3rem;
         width: 3rem;
         height: 3rem;
         text-align: center;
         padding: 0.5rem;
-        cursor: pointer
+        cursor: pointer;
+    }
+
+    .closemenulabel:hover::after {
+        background-color: var(--primary-color);
+        color: var(--gray-color);
+        border: 0.1rem solid var(--gray-color);
+        transition: all 300ms ease-in-out;
     }
 
     .closemenu:checked~.menu {
@@ -371,7 +380,7 @@ body .fullwidth {
     }
 
     .closemenu:checked~.closemenulabel::after {
-        content: '×';
+        content: '✕';
     }
 
 }
